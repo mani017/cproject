@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             agent any
             steps {
-                git branch: 'main', url: 'https://github.com/jaintpharsha/devops-june-2022.git'
+                git branch: 'main', url: 'git 'https://github.com/mani017/cproject.git''
                 sh '''
                     #!/bin/bash 
                     pwd 
@@ -16,7 +16,7 @@ pipeline {
         }
 
         stage('DEPLOY') {
-            agent { label 'slave1' } 
+            agent { label 'node' } 
             steps {
                 echo "This is a DEPLOY stage"
                 sh 'sleep 5'
@@ -24,7 +24,7 @@ pipeline {
         }
 
         stage('TESTING1') {
-            agent { label 'slave2' } 
+            agent { label 'node' } 
             steps {
                 sh 'echo "This is a TESTING1 stage"'
                 sh 'sleep 5'
@@ -32,7 +32,7 @@ pipeline {
         }
 
         stage('TESTING2') {
-            agent { label 'master' } 
+            agent { label 'node' } 
             steps {
                 sh '''
                     echo "This is a TESTING2 stage"
