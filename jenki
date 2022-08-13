@@ -10,7 +10,7 @@ pipeline {
                     pwd 
                     ls
                     echo "This is a BUILD stage"
-                    sleep 5
+                  
                 '''  
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             agent { label 'node' } 
             steps {
                 echo "This is a DEPLOY stage"
-                sh 'sleep 5'
+              
             }
         }
 
@@ -27,7 +27,7 @@ pipeline {
             agent { label 'node' } 
             steps {
                 sh 'echo "This is a TESTING1 stage"'
-                sh 'sleep 5'
+                
             }
         }
 
@@ -36,7 +36,7 @@ pipeline {
             steps {
                 sh '''
                     echo "This is a TESTING2 stage"
-                    sleep 5
+              
                 '''
             }
         }
