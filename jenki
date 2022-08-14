@@ -10,7 +10,7 @@ pipeline {
                     pwd 
                     ls
                     echo "This is a BUILD stage"
-                    sleep 5
+                    sleep 10
                   
                 '''  
             }
