@@ -20,6 +20,7 @@ pipeline {
             agent { label 'node' } 
             steps {
                 echo "This is a DEPLOY stage"
+                sleep 5
               
             }
         }
